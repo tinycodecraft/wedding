@@ -21,8 +21,14 @@ export function Layout({ children }: LayoutProps) {
     <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
       {/* Add your theme here */}
       <MantineProvider theme={{ 
+
       colorScheme,
       fontFamily: "'Montserrat', sans-serif",      
+      fontSizes: {
+        
+        xl: 24,
+        lg: 20
+      },
       other: {
         fonts:{
           main: "'Montserrat', sans-serif",

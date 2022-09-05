@@ -49,11 +49,11 @@ export default function StnLeftText() {
       </HeadingPcs>
       <TextPcs cp='p'>Join us on</TextPcs>
 
-      <motion.div initial={{ opacity: 0, scale: 2,maxHeight:0 }} 
+      <motion.div initial={{ opacity: 0, scale: 2,rotateY: -180 }} 
       animate={{
         opacity: 1,
         scale: 1,
-        maxHeight:'100%'
+        rotateY: 0
       
       }}
       transition={{
@@ -65,7 +65,7 @@ export default function StnLeftText() {
         <Text
           color={theme.colors.violet[2]}
           weight={desktop ? 600 : 400}
-          size={desktop ? 'lg' : 'xl'}
+          size={desktop ? 'xl' : 'lg'}
         >
           {event.events[0].title}
         </Text>
@@ -76,14 +76,14 @@ export default function StnLeftText() {
       </TextPcs>
       <motion.div initial={{
         opacity: 0, scale:2,
+        rotateY: -180
         
-        maxHeight: 0,
         
       }}
       animate={{
         opacity: 1, scale:1,
         
-        maxHeight: '100%'
+        rotateY: 0
       
       }}
       transition={{
@@ -95,7 +95,7 @@ export default function StnLeftText() {
       <Text
         color={theme.colors.violet[2]}
         weight={desktop ? 600 : 400}
-        size={desktop ? 'lg' : 'xl'}
+        size={desktop ? 'xl' : 'lg'}
       >
         {event.events[0].occasion.place.name}
       </Text>
