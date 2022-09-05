@@ -1,0 +1,9 @@
+.elBigText{
+    text-align: center;
+    font-weight: 400;
+}
+.elinColflex{
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+}

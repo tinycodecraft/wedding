@@ -1,0 +1,9 @@
+.elbackground {
+    width: 100%;
+    background-size: contain;
+    background: url(../footerfruit.png);
+    position:fixed;
+    bottom: 0px;
+    height: 7rem;
+
+}
