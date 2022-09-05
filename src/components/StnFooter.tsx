@@ -1,8 +1,8 @@
-import React, {Children, PropsWithChildren} from "react";
+import React from "react";
 import styled from "@emotion/styled";
 
 
-import {createPolymorphicComponent, Footer, FooterProps, useMantineTheme} from "@mantine/core";
+import { Footer, useMantineTheme} from "@mantine/core";
 import {StaticImage} from "gatsby-plugin-image";
 
 const StyledFooter = styled(Footer)`  

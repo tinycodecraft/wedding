@@ -16,6 +16,7 @@ const FrontSection = styled(Container)<SectionElProps>`
     z-index: 5;
     color: #ffffff;
     padding-bottom: 2rem;
+
   `}
 `;
 
@@ -31,6 +32,7 @@ const BackSection = styled(Container)<SectionElProps>`
     grid-row: 1 / 1;
     grid-column: 1 / 1;
     height: ${props.height};
+    width: 100%;
 
     &::before {
       position: absolute;

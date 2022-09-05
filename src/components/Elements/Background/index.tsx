@@ -1,7 +1,7 @@
 import React from 'react'
 import './element.css'
-export default function(){
+export default function Background(){
     return (
-        <div className='elbackground'></div>
+        <div className='elbackground'> </div>
     )
 }
