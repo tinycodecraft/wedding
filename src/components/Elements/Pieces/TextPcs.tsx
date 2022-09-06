@@ -16,7 +16,7 @@ export default function TextPcs({
         sx={(theme)=>({
           fontFamily: "Great Vibes, cursive",
           fontSize: `${mode == 'desktop' ? "4rem": "3rem"}`,
-          margin: "1rem",
+          margin: "0.7rem",
           color: `${mode=='desktop' ? theme.other.colors.secondary: theme.other.colors.third}`
         })}
         component={cp}

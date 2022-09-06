@@ -49,11 +49,11 @@ export default function StnLeftText() {
       </HeadingPcs>
       <TextPcs cp='p'>Join us on</TextPcs>
 
-      <motion.div initial={{ opacity: 0, scale: 2,rotateY: -180 }} 
+      <motion.div initial={{ opacity: 0, scale: 2,rotateX: -180 }} 
       animate={{
         opacity: 1,
         scale: 1,
-        rotateY: 0
+        rotateX: 0
       
       }}
       transition={{
@@ -76,14 +76,14 @@ export default function StnLeftText() {
       </TextPcs>
       <motion.div initial={{
         opacity: 0, scale:2,
-        rotateY: -180
+        rotateX: -180
         
         
       }}
       animate={{
         opacity: 1, scale:1,
         
-        rotateY: 0
+        rotateX: 0
       
       }}
       transition={{
