@@ -32,8 +32,7 @@ const BackSection = styled(Container)<SectionElProps>`
     grid-row: 1 / 1;
     grid-column: 1 / 1;
     height: ${props.height};
-    width: 100%;
-
+    
     &::before {
       position: absolute;
       content: '';
