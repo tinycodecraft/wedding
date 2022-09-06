@@ -1,9 +1,7 @@
-import { Card, CardProps, Group,Text, useMantineTheme } from "@mantine/core";
+import { Card, CardProps, Group,Text } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import React from "react";
 import ImagePcs from "./Elements/Pieces/ImagePcs";
-import TextPcs from "./Elements/Pieces/TextPcs";
-
 import { PersonProps } from "./Gob";
 
 export default function StnCard({name,description,link,alt,children}:PersonProps & CardProps) {

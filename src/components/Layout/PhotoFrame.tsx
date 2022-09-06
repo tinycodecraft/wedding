@@ -32,6 +32,7 @@ const BackSection = styled(Container)<SectionElProps>`
     grid-row: 1 / 1;
     grid-column: 1 / 1;
     height: ${props.height};
+    width:100%;
     
     &::before {
       position: absolute;
@@ -53,6 +54,7 @@ export default function PhotoFrame({ child1,child2 }: TwoColumnProps<string>) {
     }em`);
     const theme = useMantineTheme();
     return (
+      
         <SectionFrame>
             <FrontSection mode={desktop ? 'desktop' : 'phone' }>
                 {child1}
