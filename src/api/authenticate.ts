@@ -7,7 +7,9 @@ export default function handler(req, res) {
     secret: process.env.STYTCH_SECRET || '',
     env: stytch.envs.live,
   })
-  console.log(stytch.envs.test)
+  console.log(process.env.STYTCH_PROJECT_ID)
+  console.log(process.env.STYTCH_SECRET)
+  console.log(stytch.envs.live)
   const token = req.query.token
   client.magicLinks
     .authenticate(token, {
