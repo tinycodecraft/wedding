@@ -15,6 +15,7 @@ export default function Authenticate({ location: { search} }: PageProps) {
         if (response.ok) {
           response.json().then((data) => {
             // TODO: You could add a call to your database to get additional user data here
+            
             navigate('/', {
               state: {
                 user: data.user_id,
@@ -24,11 +25,11 @@ export default function Authenticate({ location: { search} }: PageProps) {
             })
           })
         } else {
-          navigate('/login')
+          navigate('/Login')
         }
       } catch (err) {
         console.error('Error authenticating magic link')
-        navigate('/login')
+        navigate('/Login')
       }
     }
     authenticate()

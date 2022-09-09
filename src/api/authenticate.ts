@@ -5,11 +5,9 @@ export default function handler(req, res) {
     // eslint-disable-next-line camelcase
     project_id: process.env.STYTCH_PROJECT_ID || '',
     secret: process.env.STYTCH_SECRET || '',
-    env: stytch.envs.live,
+    env: process.env.NODE_ENV == 'production' ? stytch.envs.live : stytch.envs.test,
   })
-  console.log(process.env.STYTCH_PROJECT_ID)
-  console.log(process.env.STYTCH_SECRET)
-  console.log(stytch.envs.live)
+
   const token = req.query.token
   client.magicLinks
     .authenticate(token, {
