@@ -26,9 +26,10 @@ const TitleContainer = styled.div`
   text-align: center;
 `
 
-const TitleEl = styled.h2`
-  font-size: 4rem;
+const TitleEl = styled.h2<SectionElProps>`  
   margin-bottom: 0;
+  ${(props) => props.mode == 'phone' && `font-size: 3rem;` || `font-size: 4rem;`
+  }
 `
 const LinkEl = styled(Link)`
   color: white;
@@ -69,7 +70,7 @@ export default function CountDownFrame({email}: UserProps) {
   return (
     <CountDownSection>
       <TitleContainer>
-      <LinkEl to="/Login" target="_blank"><TitleEl>{title}</TitleEl></LinkEl>
+      <LinkEl to="/Login" target="_blank"><TitleEl mode={mode}>{title}</TitleEl></LinkEl>
         <SubtitleEl>Join us in Celebration</SubtitleEl>
       </TitleContainer>
       <Countdown
