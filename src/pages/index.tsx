@@ -23,7 +23,7 @@ export default function HomePage({location}:PageProps) {
   }
 
   const email = String( !location.state?.user) ? '' : String( location.state?.user);
-
+  console.log(`node environment is: ${process.env.NODE_ENV}`)
   return (
     <Layout>      
       <Demo email={email} />
