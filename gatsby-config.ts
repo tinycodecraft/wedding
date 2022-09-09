@@ -6,7 +6,7 @@ const config: GatsbyConfig = {
     description: `Wedding Stuff for R&K`,
     author: "Raymond Yau",
     twitterUsername: `@rcwyau`,
-    siteUrl: `https://www.google.com`,
+    siteUrl: `https://weddingkr.gatsbyjs.io`,
     image: `./icon.png`
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
@@ -22,7 +22,7 @@ const config: GatsbyConfig = {
       resolve: `gatsby-plugin-sharp`,
       options: {
         // Defaults used for gatsbyImageData and StaticImage
-        //defaults: {
+        // defaults: {
           // formats: [`auto`, `webp`],
           // placeholder: `dominantColor`,
           // quality: 50,
@@ -34,15 +34,15 @@ const config: GatsbyConfig = {
           // pngOptions: {},
           // webpOptions: {},
           // avifOptions: {},
-        //},
+        // },
         // Set to none to allow builds to continue on image errors
-        //failOn: `none`,
+        // failOn: `none`,
         // deprecated options and their defaults:
-        //base64Width: 20,
-        //forceBase64Format: ``, // valid formats: png,jpg,webp
-        //useMozJpeg: process.env.GATSBY_JPEG_ENCODER === `MOZJPEG`,
-        //stripMetadata: true,
-        //defaultQuality: 50,
+        // base64Width: 20,
+        // forceBase64Format: ``, // valid formats: png,jpg,webp
+        // useMozJpeg: process.env.GATSBY_JPEG_ENCODER === `MOZJPEG`,
+        // stripMetadata: true,
+        // defaultQuality: 50,
       },
     },       
     {
@@ -67,17 +67,17 @@ const config: GatsbyConfig = {
         mdxOptions: {
           remarkPlugins: [
             // Add GitHub Flavored Markdown (GFM) support
-            //require(`remark-gfm`),
+            // require(`remark-gfm`),
             // To pass options, use a 2-element array with the
             // configuration in an object in the second element
-            //[require(`remark-external-links`), { target: false }],
+            // [require(`remark-external-links`), { target: false }],
           ],
           rehypePlugins: [
             // Generate heading ids for rehype-autolink-headings
-            //require(`rehype-slug`),
+            // require(`rehype-slug`),
             // To pass options, use a 2-element array with the
             // configuration in an object in the second element
-            //[require(`rehype-autolink-headings`), { behavior: `wrap` }],
+            // [require(`rehype-autolink-headings`), { behavior: `wrap` }],
           ],
         },                
       },

@@ -11,13 +11,17 @@ import StnProfile from './StnProfile'
 import CountDownFrame from './Layout/CountDownFrame'
 import Cover from './Elements/Cover'
 
-function Demo() {
+
+import { UserProps } from './Gob'
+
+function Demo({email}: UserProps) {
+
   return (
     <>
       <MainFrame>
         <PhotoFrame child1={<StnLeftText />} child2={<Cover />} />
         <StnBanner titlevalue='Bride & Groom'></StnBanner>
-        <CountDownFrame />
+        <CountDownFrame email={email} />
         <StnProfile />
       </MainFrame>
       <StnFooter>

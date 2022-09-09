@@ -1,10 +1,15 @@
 import { NavLinkProps } from "@mantine/core";
-import React from "react";
+import { PageProps } from "gatsby";
+import React, { PropsWithChildren } from "react";
 
 export as namespace globalSp;
 
 export interface ExNavLinkProps extends NavLinkProps{
   link: string; 
+}
+
+export interface UserProps extends PropsWithChildren{
+  email:string;
 }
 
 export interface PersonProps{

@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import lovebackground from '../../images/lovebackground.png'
-import { SectionElProps } from '../Gob'
-import { graphql, useStaticQuery } from 'gatsby'
+import { SectionElProps, UserProps } from '../Gob'
+import { graphql, Link, useStaticQuery } from 'gatsby'
 import { useMantineTheme } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
 import Countdown from 'react-countdown'
@@ -30,6 +30,9 @@ const TitleEl = styled.h2`
   font-size: 4rem;
   margin-bottom: 0;
 `
+const LinkEl = styled(Link)`
+  color: white;
+`
 
 const SubtitleEl = styled.sub`
   font-weight: 600;
@@ -54,19 +57,20 @@ const CountWrap = styled.div<SectionElProps>`
     flex-direction: column;`}
 `
 
-export default function CountDownFrame() {
+export default function CountDownFrame({email}: UserProps) {
   
   const {
     event: { events },
   } = useStaticQuery(QUERY)
   const desktop = useMediaQuery(`(min-width: ${768 / 16}em`)
   const mode = desktop ? 'desktop' : 'phone'
-
+  const notregister = !(email);
+  const title = notregister ? 'Save the Date' : `Happy with you(${email})`
   return (
     <CountDownSection>
       <TitleContainer>
-        <TitleEl>Save the Date</TitleEl>
-        <SubtitleEl>Join use in Celebration</SubtitleEl>
+      <LinkEl to="/Login" target="_blank"><TitleEl>{title}</TitleEl></LinkEl>
+        <SubtitleEl>Join us in Celebration</SubtitleEl>
       </TitleContainer>
       <Countdown
         date={new Date(events[0].title)}
