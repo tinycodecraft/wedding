@@ -42,8 +42,23 @@ const stytchProps = {
   },
 };
 
+// Check if window is defined (so if in the browser or in node.js).
+// https://www.gatsbyjs.com/docs/debugging-html-builds/#how-to-check-if-window-is-defined
+const isBrowser = typeof window !== "undefined"
+
 
 export default function Login() {
+
+// `gatsby build` will fail trying to build this component for
+  // server-side rendering if window is undefined, so we check to
+  // make sure we're in the browser before rendering.
+  
+  
+
+  if (!isBrowser) {
+    return null;
+  }
+
   return (
     <LoginPcs>
             <Stytch
