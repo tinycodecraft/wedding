@@ -14,6 +14,7 @@ export default function Authenticate({ location: { search} }: PageProps) {
         const response = await fetch(`/api/authenticate?token=${token}`)
         if (response.ok) {
           response.json().then((data) => {
+            
             // TODO: You could add a call to your database to get additional user data here
             
             navigate('/', {
