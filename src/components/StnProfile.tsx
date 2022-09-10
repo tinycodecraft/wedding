@@ -1,8 +1,8 @@
 import React from "react";
 import { Grid } from "@mantine/core";
 import StnCard from "./StnCard";
-import bride from "../images/bride.png";
-import groom from "../images/groom.png";
+import bride from "../images/bride10.png";
+import groom from "../images/groom10.png";
 import SimpleLink from "./Layout/SimpleLink";
 import IconImgur from "./IconImgur";
 import { graphql, useStaticQuery } from "gatsby";
