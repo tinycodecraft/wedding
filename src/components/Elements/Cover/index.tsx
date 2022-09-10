@@ -1,5 +1,5 @@
 import React from 'react'
-import cover from '../cover.png'
+import cover from '../cover10.png'
 import styled from '@emotion/styled'
 
 const ImageEl = styled.img`
