@@ -2,6 +2,12 @@
 export as namespace pageSp;
 
 export interface ResponseAuth {
-    data: any;
+    state?: {
+
+        user?: string,
+        session?:string,
+        sessionToken?: string
+        
+    };
     statusText: string;
 }

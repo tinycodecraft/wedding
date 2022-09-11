@@ -27,16 +27,29 @@ const TitleContainer = styled.div`
 
 const TitleEl = styled.h2<SectionElProps>`  
   margin-bottom: 0;
+  
   ${(props) => props.mode == 'phone' && `font-size: 3rem;` || `font-size: 4rem;`
   }
 `
 const LinkEl = styled(Link)`
   color: white;
+  text-decoration:none;
+  &:hover {
+    color: violet;
+  }
 `
 
 const SubtitleEl = styled.sub`
   font-weight: 600;
   font-size: 1rem;
+`
+const SubtitleElName = styled.sub`
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: yellow;
+  display: block;
+  
+  margin-bottom: 20px;
 `
 
 const QUERY = graphql`
@@ -65,11 +78,12 @@ export default function CountDownFrame({email}: UserProps) {
   const desktop = useMediaQuery(`(min-width: ${768 / 16}em`)
   const mode = desktop ? 'desktop' : 'phone'
   const notregister = !(email);
-  const title = notregister ? 'Save the Date' : `Happy with you(${email})`
+  const title = notregister ? 'Save the Date' : `Happy with you`
   return (
     <CountDownSection>
       <TitleContainer>
       <LinkEl to="/Login" target="_blank"><TitleEl mode={mode}>{title}</TitleEl></LinkEl>
+      {!notregister && <SubtitleElName>{email}</SubtitleElName>}
         <SubtitleEl>Join us in Celebration</SubtitleEl>
       </TitleContainer>
       <Countdown
